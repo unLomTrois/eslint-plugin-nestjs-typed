@@ -1,5 +1,5 @@
 {
-    "name": "@darraghor/eslint-plugin-nestjs-typed",
+    "name": "@unlomtrois/eslint-plugin-nestjs-typed",
     "version": "1.0.0",
     "description": "Eslint rules for nestjs projects",
     "scripts": {
