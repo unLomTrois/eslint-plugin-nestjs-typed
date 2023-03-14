@@ -1,8 +1,8 @@
 ![commit](https://badgen.net/github/last-commit/darraghoriordan/eslint-plugin-nestjs-typed/main)
-![npm](https://img.shields.io/npm/v/@darraghor/eslint-plugin-nestjs-typed.svg?color=red)
+![npm](https://img.shields.io/npm/v/@unlomtrois2/eslint-plugin-nestjs-typed.svg?color=red)
 ![npm-tag](https://badgen.net/github/tag/darraghoriordan/eslint-plugin-nestjs-typed)
-![size](https://badgen.net/bundlephobia/minzip/@darraghor/eslint-plugin-nestjs-typed?color=cyan)
-![types](https://badgen.net/npm/types/@darraghor/eslint-plugin-nestjs-typed?color=blue)
+![size](https://badgen.net/bundlephobia/minzip/@unlomtrois2/eslint-plugin-nestjs-typed?color=cyan)
+![types](https://badgen.net/npm/types/@unlomtrois2/eslint-plugin-nestjs-typed?color=blue)
 
 ## A note on versions
 
@@ -83,11 +83,11 @@ https://github.com/typestack/class-validator/issues/438
 ## To install
 
 ```
-npm install --save-dev @darraghor/eslint-plugin-nestjs-typed
+npm install --save-dev @unlomtrois2/eslint-plugin-nestjs-typed
 
 // or
 
-yarn add -D @darraghor/eslint-plugin-nestjs-typed
+yarn add -D @unlomtrois2/eslint-plugin-nestjs-typed
 ```
 
 If you don't already have `class-validator` you should install that
@@ -106,14 +106,14 @@ module.exports = {
     env: {
         es6: true,
     },
-    extends: ["plugin:@darraghor/nestjs-typed/recommended"],
+    extends: ["plugin:@unlomtrois2/nestjs-typed/recommended"],
     parser: "@typescript-eslint/parser",
     parserOptions: {
         project: ["./tsconfig.json"],
         sourceType: "module",
         ecmaVersion: "es2019",
     },
-    plugins: ["@darraghor/nestjs-typed"],
+    plugins: ["@unlomtrois2/nestjs-typed"],
 };
 ```
 
@@ -123,8 +123,8 @@ Note: You can easily turn off all the swagger rules if you don't use swagger by 
 
 ```ts
 // all the other config
-    extends: ["plugin:@darraghor/nestjs-typed/recommended",
-    "plugin:@darraghor/nestjs-typed/no-swagger"
+    extends: ["plugin:@unlomtrois2/nestjs-typed/recommended",
+    "plugin:@unlomtrois2/nestjs-typed/no-swagger"
     ],
     // more config
 ```
@@ -133,7 +133,7 @@ Disable a single rule with the full name e.g. in your eslint configuration...
 
 ```
    rules: {
-   "@darraghor/nestjs-typed/api-property-returning-array-should-set-array":
+   "@unlomtrois2/nestjs-typed/api-property-returning-array-should-set-array":
             "off",
    }
 ```
@@ -273,7 +273,7 @@ This rule accepts 2 options:
 -   `additionalTypeDecorators`: string list of custom type decorators that will be counted as valid for the rule test e.g.
 
     ```ts
-    "@darraghor/nestjs-typed/validated-non-primitive-property-needs-type-decorator": [
+    "@unlomtrois2/nestjs-typed/validated-non-primitive-property-needs-type-decorator": [
             "error",
             {additionalTypeDecorators: ["TransformDate"]},
         ],
@@ -282,7 +282,7 @@ This rule accepts 2 options:
 -   `additionalCustomValidatorDecorators`: string list of custom class-validator decorators which will get recognized as a validator by the plugin. This is especially useful if you have created your own validator outside of the standard ones provided by the library. The example below prevents errors from being raised by the linter if we use the `@IsDateRange` validator on a class property.
 
     ```ts
-    "@darraghor/nestjs-typed/validated-non-primitive-property-needs-type-decorator": [
+    "@unlomtrois2/nestjs-typed/validated-non-primitive-property-needs-type-decorator": [
             "error",
             {additionalCustomValidatorDecorators: ["IsDateRange"]},
         ],
@@ -550,7 +550,7 @@ export class ProviderArrayModule {}
 There is some additional configuration you can (and should!) provide for this rule. This is the default setting. You should over ride this with your src directory and any strings to filter out from paths (note that the `filterFromPaths` are NOT globs - just matched strings).
 
 ```ts
-    "@darraghor/nestjs-typed/injectable-should-be-provided": [
+    "@unlomtrois2/nestjs-typed/injectable-should-be-provided": [
             "error",
             {
                 src: ["src/**/*.ts"],
@@ -744,7 +744,7 @@ class TestClass {
 
 If you require authentication, and don't use a global guard, you should be explicit about how each controller or endpoint is protected, and a UseGuards annotation should cover each.
 
-NOTE: This rule is context-dependent (i.e. it'll generate useless noise if you've got a global guard) and so is OFF by default. It will need manually enabling in the rules section of your eslint config with `"@darraghor/nestjs-typed/api-methods-should-be-guarded": "error"`.
+NOTE: This rule is context-dependent (i.e. it'll generate useless noise if you've got a global guard) and so is OFF by default. It will need manually enabling in the rules section of your eslint config with `"@unlomtrois2/nestjs-typed/api-methods-should-be-guarded": "error"`.
 
 This PASSES - endpoint is protected by an AuthGuard
 
@@ -761,9 +761,8 @@ class TestClass {
 This PASSES - entire controller is protected by an AuthGuard
 
 ```ts
-@UseGuards(AuthGuard('jwt'))
+@UseGuards(AuthGuard("jwt"))
 class TestClass {
-
     @Get()
     public getAll(): Promise<string[]> {
         return [];
@@ -781,7 +780,7 @@ This PASSES - endpoint is protected by a custom Guard
 ```ts
 class TestClass {
     @Post()
-    @UseGuards(MyCustomGuard('hand-gestures'))
+    @UseGuards(MyCustomGuard("hand-gestures"))
     public getAll(): Promise<string[]> {
         return [];
     }

@@ -1,10 +1,6 @@
 {
     "xo.enable": true,
     "xo.format.enable": true,
-    "cSpell.words": [
-        "TSES",
-        "darraghor",
-        "injectables"
-    ],
-    "prettier.configPath": ".prettierrc.json",
+    "cSpell.words": ["TSES", "unlomtrois2", "injectables"],
+    "prettier.configPath": ".prettierrc.json"
 }

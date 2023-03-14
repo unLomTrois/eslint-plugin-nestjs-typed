@@ -1,11 +1,11 @@
 {
     "name": "@unlomtrois2/eslint-plugin-nestjs-typed",
-    "version": "1.0.0",
+    "version": "1.0.4",
     "description": "Eslint rules for nestjs projects",
     "scripts": {
-        "clean": "rm -Rf ./dist/",
+        "clean": "rm -Rf dist",
         "build:ci": "npm run build",
-        "build": "npm run clean && mkdir ./dist && tsc --project tsconfig.build.json",
+        "build": "npm run clean && mkdir dist && tsc --project tsconfig.build.json",
         "lint": "npx eslint -c .eslintrc.js --ext .ts './src/**/*.ts' './tests/**/*.ts' --no-error-on-unmatched-pattern",
         "test": "export NODE_OPTIONS=\"--max-old-space-size=8192\" && npx jest --runInBand --colors --reporters=default --no-cache --coverage=false --silent=false -c jest.config.ts",
         "pre-commit": "npx lint-staged",
@@ -40,6 +40,7 @@
     "main": "dist/index.js",
     "types": "index.d.ts",
     "dependencies": {
+        "@es-joy/jsdoccomment": "^0.37.0-pre.0",
         "@typescript-eslint/scope-manager": "^5.0.0",
         "@typescript-eslint/utils": "^5.0.0",
         "eslint-module-utils": "2.7.4",

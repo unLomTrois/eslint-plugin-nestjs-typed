@@ -6,9 +6,9 @@ import {ESLintUtils} from "@typescript-eslint/utils";
 // eslint-disable-next-line new-cap
 export const createRule = ESLintUtils.RuleCreator(
     // (name) =>
-    //     `https://github.com/darraghoriordan/eslint-plugin-nestjs-typed/blob/v${
+    //     `https://github.com/unlomtrois/eslint-plugin-nestjs-typed/blob/v${
     //         version as string
     //     }/packages/eslint-plugin/docs/rules/${name}.md`
     () =>
-        `https://github.com/darraghoriordan/eslint-plugin-nestjs-typed/blob/main/README.md`
+        `https://github.com/unlomtrois/eslint-plugin-nestjs-typed/blob/main/README.md`
 );

@@ -51,6 +51,12 @@ const rule = createRule({
                     context.report({
                         node: node,
                         messageId: "shouldSpecifyApiOperation",
+                        fix: (fixer) => {
+                            return fixer.insertTextBefore(
+                                node,
+                                `@ApiOperation({ summary: "describe your operation"})`
+                            );
+                        },
                     });
                 }
             },

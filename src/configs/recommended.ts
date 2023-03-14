@@ -2,34 +2,36 @@ export = {
     parser: "@typescript-eslint/parser",
     parserOptions: {sourceType: "module"},
     rules: {
-        "@darraghor/nestjs-typed/provided-injected-should-match-factory-parameters":
+        "@unlomtrois2/nestjs-typed/provided-injected-should-match-factory-parameters":
             "error",
-        "@darraghor/nestjs-typed/injectable-should-be-provided": [
+        "@unlomtrois2/nestjs-typed/injectable-should-be-provided": [
             "error",
             {
                 src: ["src/**/*.ts"],
                 filterFromPaths: ["node_modules", ".test.", ".spec."],
             },
         ],
-        "@darraghor/nestjs-typed/api-property-matches-property-optionality":
+        "@unlomtrois2/nestjs-typed/api-property-matches-property-optionality":
             "error",
-        "@darraghor/nestjs-typed/api-method-should-specify-api-response":
+        "@unlomtrois2/nestjs-typed/api-method-should-specify-api-response":
             "error",
-        "@darraghor/nestjs-typed/controllers-should-supply-api-tags": "error",
-        "@darraghor/nestjs-typed/api-enum-property-best-practices": "error",
-        "@darraghor/nestjs-typed/api-property-returning-array-should-set-array":
+        "@unlomtrois2/nestjs-typed/controllers-should-supply-api-tags": "error",
+        "@unlomtrois2/nestjs-typed/api-enum-property-best-practices": "error",
+        "@unlomtrois2/nestjs-typed/api-property-returning-array-should-set-array":
             "error",
-        "@darraghor/nestjs-typed/should-specify-forbid-unknown-values": "error",
-        "@darraghor/nestjs-typed/param-decorator-name-matches-route-param":
+        "@unlomtrois2/nestjs-typed/should-specify-forbid-unknown-values":
             "error",
-        "@darraghor/nestjs-typed/validated-non-primitive-property-needs-type-decorator":
+        "@unlomtrois2/nestjs-typed/param-decorator-name-matches-route-param":
             "error",
-        "@darraghor/nestjs-typed/validate-nested-of-array-should-set-each":
+        "@unlomtrois2/nestjs-typed/validated-non-primitive-property-needs-type-decorator":
             "error",
-        "@darraghor/nestjs-typed/all-properties-are-whitelisted": "error",
-        "@darraghor/nestjs-typed/all-properties-have-explicit-defined": "error",
-        "@darraghor/nestjs-typed/api-methods-should-be-guarded": "off",
-        "@darraghor/nestjs-typed/api-method-should-specify-api-operation":
+        "@unlomtrois2/nestjs-typed/validate-nested-of-array-should-set-each":
+            "error",
+        "@unlomtrois2/nestjs-typed/all-properties-are-whitelisted": "error",
+        "@unlomtrois2/nestjs-typed/all-properties-have-explicit-defined":
+            "error",
+        "@unlomtrois2/nestjs-typed/api-methods-should-be-guarded": "off",
+        "@unlomtrois2/nestjs-typed/api-method-should-specify-api-operation":
             "off",
     },
 };
