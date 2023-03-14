@@ -1,6 +1,6 @@
 {
     "name": "@unlomtrois2/eslint-plugin-nestjs-typed",
-    "version": "1.0.5",
+    "version": "1.0.7",
     "description": "Eslint rules for nestjs projects",
     "scripts": {
         "clean": "rm -Rf dist",

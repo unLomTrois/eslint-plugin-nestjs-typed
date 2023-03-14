@@ -36,6 +36,7 @@ const rule = createRule({
         schema: [],
         hasSuggestions: false,
         type: "suggestion",
+        fixable: "code",
     },
     defaultOptions: [],
 
