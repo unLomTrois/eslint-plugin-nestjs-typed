@@ -1,6 +1,6 @@
 {
     "name": "@unlomtrois2/eslint-plugin-nestjs-typed",
-    "version": "1.0.7",
+    "version": "1.0.9",
     "description": "Eslint rules for nestjs projects",
     "scripts": {
         "clean": "rm -Rf dist",
@@ -40,7 +40,6 @@
     "main": "dist/index.js",
     "types": "index.d.ts",
     "dependencies": {
-        "@es-joy/jsdoccomment": "^0.37.0-pre.0",
         "@typescript-eslint/scope-manager": "^5.0.0",
         "@typescript-eslint/utils": "^5.0.0",
         "eslint-module-utils": "2.7.4",
